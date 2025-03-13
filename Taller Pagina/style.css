@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.innovacion, .publicidad, .anuncios {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.innovacion {
+    background-image: url('imagen-innovacion.jpg'); 
+}
+
+.publicidad {
+    background-image: url('imagen-publicidad.jpg'); 
+}
+
+.anuncios {
+    background-image: url('imagen-anuncio.jpg'); 
+}
+
+
+.innovacion::before, .publicidad::before, .anuncios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+}
+
+.innovacion h2, .publicidad h2, .anuncios h2, 
+.innovacion p, .publicidad p, .anuncios p {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero, .publicidad, .anuncios {
+        padding: 50px 10px;
+    }
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
